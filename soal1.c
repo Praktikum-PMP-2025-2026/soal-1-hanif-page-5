@@ -20,12 +20,12 @@ int main(void){
         }
     }
     // print the matrix to verify the input
-    for(int i = 0; i < N; i++){
-        for(int j = 0; j < N; j++){
-            printf("%d ", AdjacencyMatrix[i][j]);
-        }
-        printf("\n");
-    }
+    // for(int i = 0; i < N; i++){
+    //     for(int j = 0; j < N; j++){
+    //         printf("%d ", AdjacencyMatrix[i][j]);
+    //     }
+    //     printf("\n");
+    // }
 
     // main process of getting the output variables
     int maxVertexIdx = 0; // default is 0
