@@ -31,7 +31,11 @@ int main(void){
     int maxVertexIdx = 0; // default is 0
     int maxVertex = 0;
     int isIsolated = 0; // default: False
-    int isolatedIdx; // default
+    int isolatedStatusArr[N];
+    // declaring each value to 0
+    for(int i = 0; i < N; i++){
+        isolatedStatusArr[i] = 0;
+    }
     for(int i = 0; i < N; i++){
         printf("DEGREE %d ", i);
         int x = 0;
@@ -49,16 +53,21 @@ int main(void){
         if(x == 0){
             // this is isolated matrix
             isIsolated = 1;
-            isolatedIdx = i;
+            isolatedStatusArr[i] = 1;
         }
     }
     printf("MAX_VERTEX %d\n", maxVertexIdx);
-    printf("ISOLATED ");
+    printf("ISOLATED");
     if(!isIsolated){
-        printf("NONE\n");
+        printf(" NONE\n");
     }else {
         // isIsolated = 1
-        printf("%d\n", isolatedIdx);
+        for(int i = 0; i < N; i++){
+            if(isolatedStatusArr[i] == 1){
+                printf(" %d", i);
+            }
+        }
+        printf("\n");
     }
     return 0;
 }
